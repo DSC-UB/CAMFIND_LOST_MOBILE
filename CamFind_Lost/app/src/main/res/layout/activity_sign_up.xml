@@ -107,16 +107,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:inputType="textPassword"
                 android:hint="Enter Password"
                 android:padding="5dp"
                 android:textSize="@dimen/dimension_21sp" />
 
             <EditText
-                android:id="@+id/reEnter_password_sign_up"
+                android:id="@+id/confirmPassword_sign_up"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
+                android:inputType="textPassword"
                 android:hint="Re Enter Password"
                 android:padding="5dp"
                 android:textSize="@dimen/dimension_21sp" />

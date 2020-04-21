@@ -2,7 +2,10 @@
     <string name="app_name">CamFind_Lost</string>
     <string name="title_activity_bottom_navigation">BottomNavigationActivity</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_service">Service</string>
+    <string name="title_profile">Profile</string>
     <string name="sign_up">Sign Up</string>
+    <string name="update_an_item">Update an item</string>
+    <string name="create_an_alert">Create an alert</string>
+    <string name="collect_an_item">Collect an item</string>
 </resources>

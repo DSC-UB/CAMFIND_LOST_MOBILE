@@ -2,7 +2,10 @@ package com.example.camfind_lost;
 
 import android.os.Bundle;
 
+import com.example.camfind_lost.uitil.UtilFunctions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -12,6 +15,8 @@ import androidx.navigation.ui.NavigationUI;
 
 public class BottomNavigationActivity extends AppCompatActivity {
 
+    private FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+    private UtilFunctions utilFunctions;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +30,21 @@ public class BottomNavigationActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+
+        utilFunctions = new UtilFunctions();
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(currentUser == null){
+            utilFunctions.gotoMainActivity(getApplicationContext());
+            finish();
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 }

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "417851335342",
+    "firebase_url": "https://camfindlost-c321f.firebaseio.com",
+    "project_id": "camfindlost-c321f",
+    "storage_bucket": "camfindlost-c321f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417851335342:android:b561e58acfb4a16ad0433f",
+        "android_client_info": {
+          "package_name": "com.example.camfind_lost"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "417851335342-62mb5shatreihcge1iulnklkfre28510.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQo20J2uzfMqUTZji22IZfVDYi4H64ry8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "417851335342-62mb5shatreihcge1iulnklkfre28510.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

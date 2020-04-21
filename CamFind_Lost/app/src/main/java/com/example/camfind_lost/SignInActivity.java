@@ -7,14 +7,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class SignInActivity extends AppCompatActivity {
+import com.example.camfind_lost.auth.AuthViewModel;
+import com.example.camfind_lost.uitil.UtilFunctions;
 
+public class SignInActivity extends AppCompatActivity {
+    private UtilFunctions utilFunctions;
+    private AuthViewModel authViewModel;
     Intent intent;
     private TextView signIn, goBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
+        utilFunctions = new UtilFunctions();
+        authViewModel = new AuthViewModel();
 
         signIn = findViewById(R.id.sign_In_TV);
         goBack = findViewById(R.id.back_signIn);
@@ -22,24 +28,18 @@ public class SignInActivity extends AppCompatActivity {
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setSignIn();
+                authViewModel.authUserSignIn(v);
             }
         });
 
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setGoBack();
+                utilFunctions.gotoMainActivity(getApplicationContext());
             }
         });
     }
 
-    public void setGoBack(){
-        intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
     private void setSignIn(){
-        intent = new Intent(this, BottomNavigationActivity.class);
-        startActivity(intent);
     }
 }
